@@ -263,7 +263,7 @@ export const useWaterplastProductos = () => {
         return baseUrl
     }
 
-    const processKeyShotXRHTML = async (html, productoNombre, imagesFolder = null, cleanNameOverride = null) => {
+    const processKeyShotXRHTML = async (html, productoNombre, imagesFolder = null, cleanNameOverride = null, ext = 'png') => {
         if (!html) return ''
 
         let processedHTML = html
@@ -301,7 +301,7 @@ export const useWaterplastProductos = () => {
         if (vaMatch) {
             keyshotContent = keyshotContent.replace(
                 vaPattern,
-                `this.va=function(b,f){return "${imageBaseUrl}/"+parseInt(f)+"_"+parseInt(b)+".png"}`
+                `this.va=function(b,f){return "${imageBaseUrl}/"+parseInt(f)+"_"+parseInt(b)+".${ext}"}`
             )
             modified = true
         }
@@ -310,7 +310,7 @@ export const useWaterplastProductos = () => {
             if (keyshotContent.includes('parseInt(f)+"_"+parseInt(b)')) {
                 keyshotContent = keyshotContent.replace(
                     /return [^;]+parseInt\(f\)\+["']_["']\+parseInt\(b\)[^;]+/g,
-                    `return "${imageBaseUrl}/"+parseInt(f)+"_"+parseInt(b)+".png"`
+                    `return "${imageBaseUrl}/"+parseInt(f)+"_"+parseInt(b)+".${ext}"`
                 )
                 modified = true
             }
@@ -442,7 +442,7 @@ export const useWaterplastProductos = () => {
 
             const cleanName = folderName || generateCleanName(producto.nombre)
 
-            const processedHTML = await processKeyShotXRHTML(htmlResponse, producto.nombre, imagesFolder, cleanName)
+            const processedHTML = await processKeyShotXRHTML(htmlResponse, producto.nombre, imagesFolder, cleanName, producto.xr_webp ? 'webp' : 'png')
 
             return {
                 ...producto,
