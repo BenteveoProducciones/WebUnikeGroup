@@ -2,6 +2,7 @@
   <DefaultMain>
     <WaterplastHero />
     <WaterplastMuestra />
+    <VideoYoutube pagina="waterplast" />
     <WaterplastSobre />
     <Opiniones />
     <Distribuidores empresa="waterplast" />
