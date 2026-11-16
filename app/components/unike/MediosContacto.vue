@@ -49,7 +49,7 @@ import { ROUTES_NAMES } from '~/constants/ROUTE_NAMES'
 const sedes = [
     {
         nombre: 'Unike Group',
-        direccion: 'Av. San Martín 2768, Lanús, Buenos Aires, Argentina',
+        direccion: 'Viamonte 3054, Valentín Alsina, Lanús, Buenos Aires, Argentina',
         telefono: '+54 (011) 4225.1531/7449',
         telefonoRaw: '+5491170133286',
         mail: 'info@unikegroup.com.ar',
@@ -63,7 +63,7 @@ const sedes = [
     },
     {
         nombre: 'Rohermet',
-        direccion: 'Av. San Martín 2768, Lanús, Buenos Aires, Argentina',
+        direccion: 'Viamonte 3054, Valentín Alsina, Lanús, Buenos Aires, Argentina',
         telefono: '+54 (011) 4225.1531/7449',
         telefonoRaw: '+5491170133286',
         mail: 'info@unikegroup.com.ar',

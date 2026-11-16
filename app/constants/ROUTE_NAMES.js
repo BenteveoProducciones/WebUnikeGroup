@@ -3,7 +3,7 @@ export const ROUTES_NAMES = {
     CONTACTO: {
         TELEFONO: "+5491170133286",
         MAIL: "info@unikegroup.com.ar",
-        UBICACION: "Av. San Martín 2768, Lanús Buenos Aires, Argentina",
+        UBICACION: "Viamonte 3054, Valentín Alsina, Lanús, Buenos Aires, Argentina",
     },
     UNIKE: {
         SOBRE: "/",
